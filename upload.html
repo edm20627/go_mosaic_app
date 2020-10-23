@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Mosaic</title>
+    <meta content='width=device-width, inital-scale=1.0, maximum-scale=1.0' name='viewport'>
+    <meta content='none' name='robots'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <style>
+      body {
+        padding-top: 20px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 140%
+      }
+      .content {
+        background-color: #fff;
+        padding: 20px 50px 50px 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='container'>
+      <div class='content'>
+        <h1>Mosaic</h1>
+        <div class="lead">Create a mosaic version of your image, from a pre-selected directory of images:</div>
+
+        <form class="form form-inline" method="post" action="/mosaic" enctype="multipart/form-data">
+          <select name="tile_size" class="form-control input-lg">
+            <option value="10">10</option>
+            <option value="15" selected>15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+
+          <input type="file" name="image" class="form-control input-lg"/>
+          <button class="btn btn-primary btn-lg" type="submit">
+            Do it!
+          </button>
+          <p class="help-block">Select the number of pixels and choose a JPEG file to convert into a mosaic.</p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
