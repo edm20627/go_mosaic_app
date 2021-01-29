@@ -26,7 +26,7 @@ func (db *DB) nearest(target [3]float64) string {
 			filename, smallest = k, dist
 		}
 	}
-	delete(db.store. filename)
+	delete(db.store, filename)
 	db.mutex.Unlock()
 	return filename
 }
@@ -72,7 +72,7 @@ func cloneTilesDB() DB {
 	return tiles
 }
 
-func tilesDB() map[string][3]float64{
+func tilesDB() map[string][3]float64 {
 	fmt.Println("Start populating tiles db ...")
 	db := make(map[string][3]float64)
 	files, _ := ioutil.ReadDir("tiles")
